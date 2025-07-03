@@ -21,10 +21,13 @@ export default function SunnyTaxiWebsite() {
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
               <div className="relative">
-                <Sun className="h-10 w-10 text-yellow-500" />
-                <div className="absolute inset-0 animate-pulse">
-                  <Sun className="h-10 w-10 text-yellow-300 opacity-50" />
-                </div>
+                <Image
+                  src="/logo.png"
+                  alt="Sunny Taxi Albania Logo"
+                  width={80}
+                  height={80}
+                  className="h-20 w-20 object-contain"
+                />
               </div>
               <div>
                 <h1 className="text-2xl font-bold text-gray-800">{t('title')}</h1>
@@ -452,7 +455,13 @@ export default function SunnyTaxiWebsite() {
           <div className="grid md:grid-cols-4 gap-8">
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
-                <Sun className="h-8 w-8 text-yellow-400" />
+                <Image
+                  src="/logo.png"
+                  alt="Sunny Taxi Albania Logo"
+                  width={64}
+                  height={64}
+                  className="h-16 w-16 object-contain"
+                />
                 <div>
                   <h3 className="text-xl font-bold">{t('title')}</h3>
                   <p className="text-sm text-gray-400">{t('subtitle')}</p>
