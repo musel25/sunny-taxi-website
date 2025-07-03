@@ -108,7 +108,7 @@ export default function SunnyTaxiWebsite() {
               <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-3xl transform rotate-6 opacity-20"></div>
               <div className="relative bg-white rounded-3xl shadow-2xl p-8">
                 <Image
-                  src="/placeholder.svg?height=400&width=500"
+                  src="/car-city.jpeg"
                   alt="Modern yellow taxi with Albanian landscape"
                   width={500}
                   height={400}
@@ -135,11 +135,22 @@ export default function SunnyTaxiWebsite() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-yellow-300">
-              <CardContent className="p-8 text-center">
-                <div className="bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
-                  <Car className="h-8 w-8 text-white" />
+            <Card className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-yellow-300 overflow-hidden">
+              <div className="relative h-48">
+                <Image
+                  src="/car-city.jpeg"
+                  alt="City taxi service"
+                  fill
+                  className="object-cover transition-transform group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                <div className="absolute bottom-4 left-4 right-4">
+                  <div className="bg-white rounded-full w-12 h-12 flex items-center justify-center mb-2">
+                    <Car className="h-6 w-6 text-yellow-500" />
+                  </div>
                 </div>
+              </div>
+              <CardContent className="p-6 text-center">
                 <h3 className="text-xl font-bold text-gray-800 mb-3">{t('cityRides')}</h3>
                 <p className="text-gray-600 mb-4">
                   {t('cityRidesDesc')}
@@ -152,11 +163,22 @@ export default function SunnyTaxiWebsite() {
               </CardContent>
             </Card>
 
-            <Card className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-yellow-300">
-              <CardContent className="p-8 text-center">
-                <div className="bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
-                  <MapPin className="h-8 w-8 text-white" />
+            <Card className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-yellow-300 overflow-hidden">
+              <div className="relative h-48">
+                <Image
+                  src="/car-night.jpeg"
+                  alt="Airport transfer taxi service"
+                  fill
+                  className="object-cover object-[center_63%] transition-transform group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                <div className="absolute bottom-4 left-4 right-4">
+                  <div className="bg-white rounded-full w-12 h-12 flex items-center justify-center mb-2">
+                    <MapPin className="h-6 w-6 text-blue-500" />
+                  </div>
                 </div>
+              </div>
+              <CardContent className="p-6 text-center">
                 <h3 className="text-xl font-bold text-gray-800 mb-3">{t('airportTransfer')}</h3>
                 <p className="text-gray-600 mb-4">
                   {t('airportTransferDesc')}
@@ -169,11 +191,22 @@ export default function SunnyTaxiWebsite() {
               </CardContent>
             </Card>
 
-            <Card className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-yellow-300">
-              <CardContent className="p-8 text-center">
-                <div className="bg-gradient-to-r from-green-400 to-emerald-400 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
-                  <Sun className="h-8 w-8 text-white" />
+            <Card className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-yellow-300 overflow-hidden">
+              <div className="relative h-48">
+                <Image
+                  src="/car-stadium.jpeg"
+                  alt="Stadium and events taxi service"
+                  fill
+                  className="object-cover object-[center_68%] transition-transform group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                <div className="absolute bottom-4 left-4 right-4">
+                  <div className="bg-white rounded-full w-12 h-12 flex items-center justify-center mb-2">
+                    <Sun className="h-6 w-6 text-green-500" />
+                  </div>
                 </div>
+              </div>
+              <CardContent className="p-6 text-center">
                 <h3 className="text-xl font-bold text-gray-800 mb-3">{t('scenicTours')}</h3>
                 <p className="text-gray-600 mb-4">
                   {t('scenicToursDesc')}
@@ -185,6 +218,47 @@ export default function SunnyTaxiWebsite() {
                 </ul>
               </CardContent>
             </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Night Service Section */}
+      <section className="py-20 bg-gray-900 text-white relative overflow-hidden">
+        <div className="absolute inset-0">
+          <Image
+            src="/car-night.jpeg"
+            alt="Night taxi service"
+            fill
+            className="object-cover opacity-30"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-gray-900/80 to-gray-900/60"></div>
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <Badge className="bg-yellow-400 text-gray-900 border-yellow-400 mb-6">{t('availability24')}</Badge>
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+              Safe Night Rides Across Albania
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+              Whether it's a late dinner, airport pickup, or emergency travel, our professional drivers are ready 24/7 to provide safe and reliable transportation throughout Albania.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button
+                size="lg"
+                className="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-semibold text-lg px-8 py-4"
+              >
+                <Phone className="mr-2 h-5 w-5" />
+                Call Now: +355 68 222 2233
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-2 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-gray-900 text-lg px-8 py-4"
+              >
+                <Sun className="mr-2 h-5 w-5" />
+                {t('bookNow')}
+              </Button>
+            </div>
           </div>
         </div>
       </section>
@@ -248,7 +322,7 @@ export default function SunnyTaxiWebsite() {
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-3xl transform -rotate-6 opacity-20"></div>
               <Image
-                src="/placeholder.svg?height=500&width=600"
+                src="/car-beach.jpeg"
                 alt="Happy taxi driver in sunny Albania"
                 width={600}
                 height={500}
@@ -343,7 +417,7 @@ export default function SunnyTaxiWebsite() {
                 </div>
                 <h3 className="text-xl font-bold text-gray-800 mb-3">{t('callUs')}</h3>
                 <p className="text-gray-600 mb-4">{t('callUsDesc')}</p>
-                <p className="text-lg font-semibold text-orange-600">+355 XX XXX XXX</p>
+                <p className="text-lg font-semibold text-orange-600">+355 68 222 2233</p>
               </CardContent>
             </Card>
 
@@ -354,7 +428,7 @@ export default function SunnyTaxiWebsite() {
                 </div>
                 <h3 className="text-xl font-bold text-gray-800 mb-3">{t('emailUs')}</h3>
                 <p className="text-gray-600 mb-4">{t('emailUsDesc')}</p>
-                <p className="text-lg font-semibold text-blue-600">hello@sunnytaxi.al</p>
+                <p className="text-lg font-semibold text-blue-600 break-all">sunnytaxialbania@gmail.com</p>
               </CardContent>
             </Card>
 
@@ -446,11 +520,11 @@ export default function SunnyTaxiWebsite() {
               <div className="space-y-3 text-gray-400">
                 <div className="flex items-center space-x-2">
                   <Phone className="h-4 w-4" />
-                  <span>+355 XX XXX XXX</span>
+                  <span>+355 68 222 2233</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <Mail className="h-4 w-4" />
-                  <span>hello@sunnytaxi.al</span>
+                  <span className="break-all">sunnytaxialbania@gmail.com</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <MapPin className="h-4 w-4" />
