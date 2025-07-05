@@ -77,11 +77,20 @@ export const translations = {
     passenger3: "3 Passengers",
     passenger4: "4+ Passengers",
     
+    // Booking Section - WhatsApp
+    bookViaWhatsApp: "Book via WhatsApp",
+    whatsappBookingDesc: "Click the button below to start a WhatsApp conversation with our booking team. We'll help you arrange your ride quickly and easily.",
+    bookOnWhatsApp: "Book on WhatsApp",
+    orCallDirect: "Or call us directly:",
+    
     // Contact Section
     getInTouch: "Get in Touch",
     contactTitle: "We're Here to Help",
     contactSubtitle: "Have questions or need assistance? Our friendly team is always ready to brighten your day.",
     
+    whatsAppUs: "WhatsApp Us",
+    whatsAppUsDesc: "Quick and easy messaging for instant support",
+    contactWhatsApp: "Contact via WhatsApp",
     callUs: "Call Us",
     callUsDesc: "Available 24/7 for bookings and support",
     emailUs: "Email Us",
@@ -179,11 +188,20 @@ export const translations = {
     passenger3: "3 Pasagjerë",
     passenger4: "4+ Pasagjerë",
     
+    // Booking Section - WhatsApp
+    bookViaWhatsApp: "Rezervo me WhatsApp",
+    whatsappBookingDesc: "Klikoni butonin më poshtë për të filluar një bisedë WhatsApp me ekipin tonë të rezervimeve. Do t'ju ndihmojmë të organizoni udhëtimin tuaj shpejt dhe lehtë.",
+    bookOnWhatsApp: "Rezervo në WhatsApp",
+    orCallDirect: "Ose na telefononi direkt:",
+    
     // Contact Section
     getInTouch: "Kontaktoni me Ne",
     contactTitle: "Jemi Këtu për t'ju Ndihmuar",
     contactSubtitle: "Keni pyetje ose nevojiteni ndihmë? Ekipi ynë miqësor është gjithmonë gati për t'ju ndriçuar ditën.",
     
+    whatsAppUs: "Na Shkruani në WhatsApp",
+    whatsAppUsDesc: "Mesazhe të shpejta dhe të lehta për mbështetje të menjëhershme",
+    contactWhatsApp: "Kontaktoni me WhatsApp",
     callUs: "Na Telefononi",
     callUsDesc: "I disponueshëm 24/7 për rezervime dhe mbështetje",
     emailUs: "Na Shkruani Email",

@@ -73,6 +73,7 @@ export default function SunnyTaxiWebsite() {
                 <Button
                   size="lg"
                   className="bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-white shadow-xl text-lg px-8 py-4"
+                  onClick={() => window.open('https://wa.me/+355682222233?text=Hello%2C%20I%20would%20like%20to%20book%20a%20ride%20with%20Sunny%20Taxi%20Albania', '_blank')}
                 >
                   <Car className="mr-2 h-5 w-5" />
                   {t('bookYourRide')}
@@ -81,9 +82,10 @@ export default function SunnyTaxiWebsite() {
                   size="lg"
                   variant="outline"
                   className="border-2 border-orange-300 text-orange-700 hover:bg-orange-50 text-lg px-8 py-4 bg-transparent"
+                  onClick={() => window.open('https://wa.me/+355682222233?text=Hello%2C%20I%20need%20a%20taxi%20right%20now', '_blank')}
                 >
                   <Phone className="mr-2 h-5 w-5" />
-                  {t('callNow')}
+                  Send WhatsApp
                 </Button>
               </div>
 
@@ -249,14 +251,16 @@ export default function SunnyTaxiWebsite() {
               <Button
                 size="lg"
                 className="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-semibold text-lg px-8 py-4"
+                onClick={() => window.open('https://wa.me/+355682222233?text=Hello%2C%20I%20need%20a%20taxi%20for%20a%20night%20ride', '_blank')}
               >
                 <Phone className="mr-2 h-5 w-5" />
-                Call Now: +355 68 222 2233
+                Send WhatsApp
               </Button>
               <Button
                 size="lg"
                 variant="outline"
                 className="border-2 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-gray-900 text-lg px-8 py-4"
+                onClick={() => window.open('https://wa.me/+355682222233?text=Hello%2C%20I%20would%20like%20to%20book%20a%20ride%20with%20Sunny%20Taxi%20Albania', '_blank')}
               >
                 <Sun className="mr-2 h-5 w-5" />
                 {t('bookNow')}
@@ -348,51 +352,28 @@ export default function SunnyTaxiWebsite() {
 
             <Card className="shadow-2xl border-2 border-yellow-200">
               <CardContent className="p-8">
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="space-y-4">
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">{t('pickupLocation')}</label>
-                      <Input
-                        placeholder={t('pickupPlaceholder')}
-                        className="border-2 border-gray-200 focus:border-yellow-400"
-                      />
+                <div className="text-center space-y-6">
+                  <div className="bg-green-50 border-2 border-green-200 rounded-lg p-6">
+                    <div className="flex items-center justify-center mb-4">
+                      <div className="bg-green-500 rounded-full p-3">
+                        <Phone className="h-8 w-8 text-white" />
+                      </div>
                     </div>
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">{t('destination')}</label>
-                      <Input
-                        placeholder={t('destinationPlaceholder')}
-                        className="border-2 border-gray-200 focus:border-yellow-400"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">{t('phoneNumber')}</label>
-                      <Input
-                        placeholder={t('phoneNumberPlaceholder')}
-                        className="border-2 border-gray-200 focus:border-yellow-400"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="space-y-4">
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">{t('dateTime')}</label>
-                      <Input type="datetime-local" className="border-2 border-gray-200 focus:border-yellow-400" />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">{t('passengers')}</label>
-                      <select className="w-full p-3 border-2 border-gray-200 rounded-md focus:border-yellow-400 focus:outline-none">
-                        <option>{t('passenger1')}</option>
-                        <option>{t('passenger2')}</option>
-                        <option>{t('passenger3')}</option>
-                        <option>{t('passenger4')}</option>
-                      </select>
-                    </div>
-                    <div className="pt-4">
-                      <Button className="w-full bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-white text-lg py-6">
-                        <Sun className="mr-2 h-5 w-5" />
-                        {t('bookYourSunnyRide')}
-                      </Button>
-                    </div>
+                    <h3 className="text-2xl font-bold text-gray-800 mb-3">{t('bookViaWhatsApp')}</h3>
+                    <p className="text-gray-600 mb-6">
+                      {t('whatsappBookingDesc')}
+                    </p>
+                    <Button 
+                      size="lg"
+                      className="bg-green-500 hover:bg-green-600 text-white text-lg px-8 py-4 mb-4"
+                      onClick={() => {
+                        const message = `Hello Sunny Taxi Albania! I would like to book a ride.\n\n📍 Pickup Location: \n📍 Destination: \n📅 Date & Time: \n👥 Number of Passengers: \n📞 My Phone Number: \n\nPlease confirm availability and pricing. Thank you!`;
+                        window.open(`https://wa.me/+355682222233?text=${encodeURIComponent(message)}`, '_blank');
+                      }}
+                    >
+                      <Phone className="mr-2 h-5 w-5" />
+                      {t('bookOnWhatsApp')}
+                    </Button>
                   </div>
                 </div>
               </CardContent>
@@ -412,15 +393,24 @@ export default function SunnyTaxiWebsite() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <Card className="text-center hover:shadow-xl transition-shadow">
               <CardContent className="p-8">
-                <div className="bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
+                <div className="bg-gradient-to-r from-green-400 to-emerald-400 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
                   <Phone className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-800 mb-3">{t('callUs')}</h3>
-                <p className="text-gray-600 mb-4">{t('callUsDesc')}</p>
-                <p className="text-lg font-semibold text-orange-600">+355 68 222 2233</p>
+                <h3 className="text-xl font-bold text-gray-800 mb-3">{t('whatsAppUs')}</h3>
+                <p className="text-gray-600 mb-4">{t('whatsAppUsDesc')}</p>
+                <div className="space-y-3">
+                  <Button 
+                    className="bg-green-500 hover:bg-green-600 text-white"
+                    onClick={() => window.open('https://wa.me/+355682222233?text=Hello%2C%20I%20would%20like%20to%20contact%20Sunny%20Taxi%20Albania', '_blank')}
+                  >
+                    <Phone className="mr-2 h-4 w-4" />
+                    {t('contactWhatsApp')}
+                  </Button>
+                  <p className="text-sm text-gray-500">+355 68 222 2233</p>
+                </div>
               </CardContent>
             </Card>
 
@@ -431,18 +421,16 @@ export default function SunnyTaxiWebsite() {
                 </div>
                 <h3 className="text-xl font-bold text-gray-800 mb-3">{t('emailUs')}</h3>
                 <p className="text-gray-600 mb-4">{t('emailUsDesc')}</p>
-                <p className="text-lg font-semibold text-blue-600 break-all">sunnytaxialbania@gmail.com</p>
-              </CardContent>
-            </Card>
-
-            <Card className="text-center hover:shadow-xl transition-shadow">
-              <CardContent className="p-8">
-                <div className="bg-gradient-to-r from-green-400 to-emerald-400 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
-                  <MapPin className="h-8 w-8 text-white" />
+                <div className="space-y-3">
+                  <Button 
+                    className="bg-blue-500 hover:bg-blue-600 text-white"
+                    onClick={() => window.open('mailto:sunnytaxialbania@gmail.com?subject=Sunny Taxi Inquiry&body=Hello, I would like to inquire about your taxi services.', '_self')}
+                  >
+                    <Mail className="mr-2 h-4 w-4" />
+                    Send Email
+                  </Button>
+                  <p className="text-sm text-gray-500 break-all">sunnytaxialbania@gmail.com</p>
                 </div>
-                <h3 className="text-xl font-bold text-gray-800 mb-3">{t('visitUs')}</h3>
-                <p className="text-gray-600 mb-4">{t('visitUsDesc')}</p>
-                <p className="text-lg font-semibold text-green-600">Tirana, Albania</p>
               </CardContent>
             </Card>
           </div>
@@ -529,11 +517,12 @@ export default function SunnyTaxiWebsite() {
               <div className="space-y-3 text-gray-400">
                 <div className="flex items-center space-x-2">
                   <Phone className="h-4 w-4" />
-                  <span>+355 68 222 2233</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <Mail className="h-4 w-4" />
-                  <span className="break-all">sunnytaxialbania@gmail.com</span>
+                  <button 
+                    onClick={() => window.open('https://wa.me/+355682222233?text=Hello%2C%20I%20would%20like%20to%20contact%20Sunny%20Taxi%20Albania', '_blank')}
+                    className="hover:text-green-400 transition-colors"
+                  >
+                    WhatsApp: +355 68 222 2233
+                  </button>
                 </div>
                 <div className="flex items-center space-x-2">
                   <MapPin className="h-4 w-4" />
