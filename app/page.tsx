@@ -9,6 +9,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { useLanguage } from "@/contexts/language-context"
 import LanguageToggle from "@/components/ui/language-toggle"
+import BookingForm from "@/components/booking-form"
 
 export default function SunnyTaxiWebsite() {
   const { t } = useLanguage();
@@ -352,30 +353,7 @@ export default function SunnyTaxiWebsite() {
 
             <Card className="shadow-2xl border-2 border-yellow-200">
               <CardContent className="p-8">
-                <div className="text-center space-y-6">
-                  <div className="bg-green-50 border-2 border-green-200 rounded-lg p-6">
-                    <div className="flex items-center justify-center mb-4">
-                      <div className="bg-green-500 rounded-full p-3">
-                        <Phone className="h-8 w-8 text-white" />
-                      </div>
-                    </div>
-                    <h3 className="text-2xl font-bold text-gray-800 mb-3">{t('bookViaWhatsApp')}</h3>
-                    <p className="text-gray-600 mb-6">
-                      {t('whatsappBookingDesc')}
-                    </p>
-                    <Button 
-                      size="lg"
-                      className="bg-green-500 hover:bg-green-600 text-white text-lg px-8 py-4 mb-4"
-                      onClick={() => {
-                        const message = `Hello Sunny Taxi Albania! I would like to book a ride.\n\n📍 Pickup Location: \n📍 Destination: \n📅 Date & Time: \n👥 Number of Passengers: \n📞 My Phone Number: \n\nPlease confirm availability and pricing. Thank you!`;
-                        window.open(`https://wa.me/+355682222233?text=${encodeURIComponent(message)}`, '_blank');
-                      }}
-                    >
-                      <Phone className="mr-2 h-5 w-5" />
-                      {t('bookOnWhatsApp')}
-                    </Button>
-                  </div>
-                </div>
+                <BookingForm />
               </CardContent>
             </Card>
           </div>
