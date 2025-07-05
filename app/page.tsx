@@ -73,7 +73,7 @@ export default function SunnyTaxiWebsite() {
                 <Button
                   size="lg"
                   className="bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-white shadow-xl text-lg px-8 py-4"
-                  onClick={() => window.open('https://wa.me/+355682222233?text=Hello%2C%20I%20would%20like%20to%20book%20a%20ride%20with%20Sunny%20Taxi%20Albania', '_blank')}
+                  onClick={() => document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' })}
                 >
                   <Car className="mr-2 h-5 w-5" />
                   {t('bookYourRide')}
@@ -242,10 +242,10 @@ export default function SunnyTaxiWebsite() {
           <div className="max-w-4xl mx-auto text-center">
             <Badge className="bg-yellow-400 text-gray-900 border-yellow-400 mb-6">{t('availability24')}</Badge>
             <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-              Safe Night Rides Across Albania
+              {t('nightRidesTitle')}
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Whether it's a late dinner, airport pickup, or emergency travel, our professional drivers are ready 24/7 to provide safe and reliable transportation throughout Albania.
+              {t('nightRidesDesc')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
@@ -254,13 +254,13 @@ export default function SunnyTaxiWebsite() {
                 onClick={() => window.open('https://wa.me/+355682222233?text=Hello%2C%20I%20need%20a%20taxi%20for%20a%20night%20ride', '_blank')}
               >
                 <Phone className="mr-2 h-5 w-5" />
-                Send WhatsApp
+                {t('sendWhatsApp')}
               </Button>
               <Button
                 size="lg"
                 variant="outline"
                 className="border-2 border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-gray-900 text-lg px-8 py-4"
-                onClick={() => window.open('https://wa.me/+355682222233?text=Hello%2C%20I%20would%20like%20to%20book%20a%20ride%20with%20Sunny%20Taxi%20Albania', '_blank')}
+                onClick={() => document.getElementById('booking')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 <Sun className="mr-2 h-5 w-5" />
                 {t('bookNow')}
@@ -341,7 +341,7 @@ export default function SunnyTaxiWebsite() {
       </section>
 
       {/* Booking Section */}
-      <section className="py-20 bg-white">
+      <section id="booking" className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
@@ -427,7 +427,7 @@ export default function SunnyTaxiWebsite() {
                     onClick={() => window.open('mailto:sunnytaxialbania@gmail.com?subject=Sunny Taxi Inquiry&body=Hello, I would like to inquire about your taxi services.', '_self')}
                   >
                     <Mail className="mr-2 h-4 w-4" />
-                    Send Email
+                    {t('sendEmail')}
                   </Button>
                   <p className="text-sm text-gray-500 break-all">sunnytaxialbania@gmail.com</p>
                 </div>
@@ -440,9 +440,9 @@ export default function SunnyTaxiWebsite() {
       {/* Footer */}
       <footer className="bg-gray-800 text-white py-12">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-3 gap-8 text-center">
             <div className="space-y-4">
-              <div className="flex items-center space-x-3">
+              <div className="flex items-center justify-center space-x-3">
                 <Image
                   src="/logo.png"
                   alt="Sunny Taxi Albania Logo"
@@ -486,36 +486,11 @@ export default function SunnyTaxiWebsite() {
               </ul>
             </div>
 
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Company</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li>
-                  <Link href="#" className="hover:text-yellow-400 transition-colors">
-                    {t('aboutUs')}
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-yellow-400 transition-colors">
-                    {t('ourFleet')}
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-yellow-400 transition-colors">
-                    {t('safety')}
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-yellow-400 transition-colors">
-                    {t('careers')}
-                  </Link>
-                </li>
-              </ul>
-            </div>
 
             <div>
               <h4 className="text-lg font-semibold mb-4">{t('contactInfo')}</h4>
               <div className="space-y-3 text-gray-400">
-                <div className="flex items-center space-x-2">
+                <div className="flex items-center justify-center space-x-2">
                   <Phone className="h-4 w-4" />
                   <button 
                     onClick={() => window.open('https://wa.me/+355682222233?text=Hello%2C%20I%20would%20like%20to%20contact%20Sunny%20Taxi%20Albania', '_blank')}
@@ -524,7 +499,7 @@ export default function SunnyTaxiWebsite() {
                     WhatsApp: +355 68 222 2233
                   </button>
                 </div>
-                <div className="flex items-center space-x-2">
+                <div className="flex items-center justify-center space-x-2">
                   <MapPin className="h-4 w-4" />
                   <span>Tirana, Albania</span>
                 </div>

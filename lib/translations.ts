@@ -106,7 +106,11 @@ export const translations = {
     safety: "Safety",
     careers: "Careers",
     contactInfo: "Contact Info",
-    footerCopyright: "Sunny Taxi Albania. All rights reserved. Made with ☀️ in Albania.",
+    nightRidesTitle: "Safe Night Rides Across Albania",
+    nightRidesDesc: "Whether it's a late dinner, airport pickup, or emergency travel, our professional drivers are ready 24/7 to provide safe and reliable transportation throughout Albania.",
+    sendEmail: "Send Email",
+    sendWhatsApp: "Send WhatsApp",
+    footerCopyright: "Sunny Taxi Albania. All rights reserved. Made by Müsel Tabares and Joanikij Chulev",
     
     // Meta
     pageTitle: "Sunny Taxi - Albania's Happiest Ride",
@@ -217,7 +221,11 @@ export const translations = {
     safety: "Siguria",
     careers: "Karriera",
     contactInfo: "Informacioni i Kontaktit",
-    footerCopyright: "Sunny Taxi Albania. Të gjitha të drejtat e rezervuara. Bërë me ☀️ në Shqipëri.",
+    nightRidesTitle: "Udhëtime të Sigurta Natën nëpër Shqipëri",
+    nightRidesDesc: "Qoftë një darkë e vonë, marrje nga aeroporti, ose udhëtim emergjent, shoferët tanë profesionalë janë gati 24/7 për t'u ofruar transport të sigurt dhe të besueshëm në të gjithë Shqipërinë.",
+    sendEmail: "Dërgo Email",
+    sendWhatsApp: "Dërgo WhatsApp",
+    footerCopyright: "Sunny Taxi Albania. Të gjitha të drejtat e rezervuara. Bërë nga Müsel Tabares dhe Joanikij Chulev",
     
     // Meta
     pageTitle: "Sunny Taxi - Udhëtimi më i Gëzuar i Shqipërisë",
