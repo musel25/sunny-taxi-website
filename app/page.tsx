@@ -35,21 +35,23 @@ export default function SunnyTaxiWebsite() {
                 <p className="text-sm text-orange-600">{t('subtitle')}</p>
               </div>
             </div>
-            <nav className="hidden md:flex items-center space-x-6">
-              <Link href="#services" className="text-gray-700 hover:text-orange-600 transition-colors">
-                {t('services')}
-              </Link>
-              <Link href="#about" className="text-gray-700 hover:text-orange-600 transition-colors">
-                {t('about')}
-              </Link>
-              <Link href="#contact" className="text-gray-700 hover:text-orange-600 transition-colors">
-                {t('contact')}
-              </Link>
+            <div className="flex items-center space-x-4">
               <LanguageToggle />
-              <Button className="bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-white shadow-lg">
-                {t('bookNow')}
-              </Button>
-            </nav>
+              <nav className="hidden md:flex items-center space-x-6">
+                <Link href="#services" className="text-gray-700 hover:text-orange-600 transition-colors">
+                  {t('services')}
+                </Link>
+                <Link href="#about" className="text-gray-700 hover:text-orange-600 transition-colors">
+                  {t('about')}
+                </Link>
+                <Link href="#contact" className="text-gray-700 hover:text-orange-600 transition-colors">
+                  {t('contact')}
+                </Link>
+                <Button className="bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-white shadow-lg">
+                  {t('bookNow')}
+                </Button>
+              </nav>
+            </div>
           </div>
         </div>
       </header>
