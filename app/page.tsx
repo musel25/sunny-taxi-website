@@ -487,6 +487,24 @@ export default function SunnyTaxiWebsite() {
 
           <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
             <p>&copy; {new Date().getFullYear()} {t('footerCopyright')}</p>
+            <div className="mt-4 text-sm">
+              <p>
+                Website made by{' '}
+                <button
+                  onClick={() => window.open('https://musel.dev', '_blank')}
+                  className="text-yellow-400 hover:text-yellow-300 transition-colors underline"
+                >
+                  Musel Tabares
+                </button>
+                {' & '}
+                <button
+                  onClick={() => window.open('https://jchulev.com', '_blank')}
+                  className="text-yellow-400 hover:text-yellow-300 transition-colors underline"
+                >
+                  Joanikij Chulev
+                </button>
+              </p>
+            </div>
           </div>
         </div>
       </footer>

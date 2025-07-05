@@ -110,7 +110,7 @@ export const translations = {
     nightRidesDesc: "Whether it's a late dinner, airport pickup, or emergency travel, our professional drivers are ready 24/7 to provide safe and reliable transportation throughout Albania.",
     sendEmail: "Send Email",
     sendWhatsApp: "Send WhatsApp",
-    footerCopyright: "Sunny Taxi Albania. All rights reserved. Made by Müsel Tabares and Joanikij Chulev",
+    footerCopyright: "Sunny Taxi Albania. All rights reserved.",
     
     // Meta
     pageTitle: "Sunny Taxi - Albania's Happiest Ride",
