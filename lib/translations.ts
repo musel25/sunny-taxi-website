@@ -37,10 +37,16 @@ export const translations = {
     luggageAssistance: "Luggage assistance",
     
     scenicTours: "Scenic Tours",
-    scenicToursDesc: "Discover Albania's beautiful landscapes with our guided taxi tours and sightseeing services.",
+    scenicToursDesc: "Discover Albania's beautiful landscapes with our guided taxi tours and sightseeing services. Popular trips to Vlora and Durrës.",
     localGuide: "Local guide knowledge",
     flexibleItineraries: "Flexible itineraries",
     photoStops: "Photo stops included",
+    
+    busStationTransfer: "Bus Station Transfer",
+    busStationTransferDesc: "Convenient transfers to and from bus stations across Albania with punctual service and local knowledge.",
+    punctualService: "Punctual arrivals",
+    localKnowledge: "Local route knowledge",
+    comfortableVehicles: "Comfortable vehicles",
     
     // Features Section
     whyChoose: "Why Choose Sunny Taxi?",
@@ -152,10 +158,16 @@ export const translations = {
     luggageAssistance: "Ndihmë me bagazhet",
     
     scenicTours: "Tura Panoramike",
-    scenicToursDesc: "Zbuloni peizazhet e bukura të Shqipërisë me turat tona me udhërrëfyes dhe shërbimet e turizmit.",
+    scenicToursDesc: "Zbuloni peizazhet e bukura të Shqipërisë me turat tona me udhërrëfyes dhe shërbimet e turizmit. Udhëtime të popullarizuara në Vlorë dhe Durrës.",
     localGuide: "Njohje nga udhërrëfyesi vendor",
     flexibleItineraries: "Itinerare fleksibël",
     photoStops: "Ndalesat për foto të përfshira",
+    
+    busStationTransfer: "Transfer Stacioni i Autobusëve",
+    busStationTransferDesc: "Transfere të përshtatshme nga dhe për stacionet e autobusëve në të gjithë Shqipërinë me shërbim të saktë dhe njohje vendore.",
+    punctualService: "Arritje të sakta",
+    localKnowledge: "Njohje e rrugëve vendore",
+    comfortableVehicles: "Automjete të rehatshme",
     
     // Features Section
     whyChoose: "Pse të Zgjidhni Sunny Taxi?",

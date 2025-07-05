@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Sun, Car, Shield, Star, Phone, Mail, MapPin, CreditCard, Smartphone, CheckCircle } from "lucide-react"
+import { Sun, Car, Shield, Star, Phone, Mail, MapPin, CreditCard, Smartphone, CheckCircle, Bus } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { useLanguage } from "@/contexts/language-context"
@@ -140,11 +140,11 @@ export default function SunnyTaxiWebsite() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <Card className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-yellow-300 overflow-hidden">
               <div className="relative h-48">
                 <Image
-                  src="/car-city.jpeg"
+                  src="/city-rides.jpeg"
                   alt="City taxi service"
                   fill
                   className="object-cover transition-transform group-hover:scale-105"
@@ -172,10 +172,10 @@ export default function SunnyTaxiWebsite() {
             <Card className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-yellow-300 overflow-hidden">
               <div className="relative h-48">
                 <Image
-                  src="/car-night.jpeg"
+                  src="/airport-transfer.jpeg"
                   alt="Airport transfer taxi service"
                   fill
-                  className="object-cover object-[center_63%] transition-transform group-hover:scale-105"
+                  className="object-cover transition-transform group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                 <div className="absolute bottom-4 left-4 right-4">
@@ -200,10 +200,10 @@ export default function SunnyTaxiWebsite() {
             <Card className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-yellow-300 overflow-hidden">
               <div className="relative h-48">
                 <Image
-                  src="/car-stadium.jpeg"
-                  alt="Stadium and events taxi service"
+                  src="/scenic-routes.jpeg"
+                  alt="Scenic routes taxi service"
                   fill
-                  className="object-cover object-[center_68%] transition-transform group-hover:scale-105"
+                  className="object-cover transition-transform group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                 <div className="absolute bottom-4 left-4 right-4">
@@ -221,6 +221,34 @@ export default function SunnyTaxiWebsite() {
                   <li>• {t('localGuide')}</li>
                   <li>• {t('flexibleItineraries')}</li>
                   <li>• {t('photoStops')}</li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="group hover:shadow-xl transition-all duration-300 border-2 hover:border-yellow-300 overflow-hidden">
+              <div className="relative h-48">
+                <Image
+                  src="/bus-station.jpeg"
+                  alt="Bus station transfer service"
+                  fill
+                  className="object-cover transition-transform group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                <div className="absolute bottom-4 left-4 right-4">
+                  <div className="bg-white rounded-full w-12 h-12 flex items-center justify-center mb-2">
+                    <Bus className="h-6 w-6 text-purple-500" />
+                  </div>
+                </div>
+              </div>
+              <CardContent className="p-6 text-center">
+                <h3 className="text-xl font-bold text-gray-800 mb-3">{t('busStationTransfer')}</h3>
+                <p className="text-gray-600 mb-4">
+                  {t('busStationTransferDesc')}
+                </p>
+                <ul className="text-sm text-gray-500 space-y-1">
+                  <li>• {t('punctualService')}</li>
+                  <li>• {t('localKnowledge')}</li>
+                  <li>• {t('comfortableVehicles')}</li>
                 </ul>
               </CardContent>
             </Card>
@@ -330,7 +358,7 @@ export default function SunnyTaxiWebsite() {
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-3xl transform -rotate-6 opacity-20"></div>
               <Image
-                src="/car-beach.jpeg"
+                src="/car-stadium.jpeg"
                 alt="Happy taxi driver in sunny Albania"
                 width={600}
                 height={500}
@@ -494,7 +522,7 @@ export default function SunnyTaxiWebsite() {
                   onClick={() => window.open('https://musel.dev', '_blank')}
                   className="text-yellow-400 hover:text-yellow-300 transition-colors underline"
                 >
-                  Musel Tabares
+                  Müsel Tabares
                 </button>
                 {' & '}
                 <button
